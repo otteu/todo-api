@@ -34,6 +34,21 @@ DB: mysql container (docker 다른 PC)
  - /api/todo/list       GET       10건 조회
  - /api/todo/api/{tno}  GET       Api 상태 포함 조회
 
+4. 스키마
+ -- todo.tbl_todo definition
+
+CREATE TABLE `tbl_todo` (
+  `complete` bit(1) NOT NULL,
+  `due_date` date DEFAULT NULL,
+  `created_date_time` datetime(6) DEFAULT NULL,
+  `modified_date_time` datetime(6) DEFAULT NULL,
+  `tno` bigint NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) NOT NULL,
+  `content` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`tno`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
 - 느낌점
   spring boot 버전 상향 후 조금씩 수정 된 부분 인지 필요
   모듈을 분리로 인해 발생 되는 문제점 해결 필요
