@@ -24,9 +24,12 @@ DB: mysql container (docker 다른 PC)
  - CURD 및 페이징 처리를 할 수 있는지
  - HTTP 통신의 특성인 stateless에 대한 인증 방식을 알고 있는지
 
-2. Intellj를 통해 개발을 진행 - Intellj에서는 잘 동작 하나 build 후 문제가 발생 모듈을 분리 하면서 인지 하지 못한 부분으로 그런 것으로 파악 (공부의 시간이 필요)
+2. Intellj를 통해 개발을 진행 - Intellj에서는 잘 동작 하나 build 후 문제가 발생 모듈을 분리 하면서 인지 하지 못한 부분으로 그런 것으로 
+ 파악 (공부의 시간이 필요)
+   Intellj로 실행시 정상 작동, application.yml 설정에 db연결 정보 수정 및 user개정 생성 및 권한 부여
 
-3. api, Swagger 
+
+4. api, Swagger 
  - /api/todo/{tno}      GET       단건 조회
  - /api/todo/{tno}      PUT       업데이트
  - /api/todo/{tno}      DELETE    삭제
